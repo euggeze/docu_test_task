@@ -31,5 +31,5 @@ class CategoriesTask(Base):
 
 
 if __name__ == '__main__':
-    db = create_engine('sqlite:///../test.db')
+    db = create_engine('sqlite:///test.db')
     Base.metadata.create_all(db)
