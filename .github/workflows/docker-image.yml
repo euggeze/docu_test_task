@@ -12,5 +12,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build . --tag docutest:$(date +%s)
+    - name: Build and push the Docker image
+      run: docker build . --tag ${{ secrets.DOCKER_NAME }}/docutest:latest && echo ${{ secrets.DOCKER_KEY }} | docker login -u ${{ secrets.DOCKER_NAME }} --password-stdin && docker push ${{ secrets.DOCKER_NAME }}/docutest:latest
