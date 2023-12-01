@@ -79,8 +79,8 @@ async def change_task(pk: int, task_title: Annotated[str | None, Form()] = None,
         if task is None:
             return Response(status_code=HTTP_400_BAD_REQUEST)
 
-        task.title = task_title or task.title
-        task.description = task_description or task.description
+        task.task_title = task_title or task.task_title
+        task.task_description = task_description or task.task_description
         session.commit()
         session.close()
     return Response(status_code=HTTP_204_NO_CONTENT)
