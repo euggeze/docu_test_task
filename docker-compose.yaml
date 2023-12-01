@@ -3,6 +3,6 @@ version: "3"
 services:
   docu_test:
     image: euggeze/docutest:latest
-    command: bash -c "cd docu && uvicorn main:app --host 0.0.0.0 --port 8000"
+    command: bash -c "cd /docu && uvicorn main:app --host 0.0.0.0 --port 8000"
     ports:
       - "8000:8000"
