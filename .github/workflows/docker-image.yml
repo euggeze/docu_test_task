@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --tag docutest:$(date +%s) && docker push docutest:$(date +%s)
+      run: docker build . --tag docutest:$(date +%s) && docker push docutest:latest
