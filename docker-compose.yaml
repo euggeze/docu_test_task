@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  docu_test:
+    image: euggeze/docu_test:latest
+    ports:
+      - "8000:8000"
